@@ -49,7 +49,7 @@ export const leerInput = async (message) =>{
             message,
             validate(value) {
                 if (value.length === 0) {
-                    return 'Por favor ingrese un valor';
+                    return 'Por favor ingrese una pieza de ajedrez!!!';
                 }
                 return true;
             }

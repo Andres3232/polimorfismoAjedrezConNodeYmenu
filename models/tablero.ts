@@ -23,7 +23,7 @@ class Tablero {
         return listado
     }
 
-    crearPieza( desc = ''){
+    crearPieza( desc : string){
         const pieza = new Pieza(desc);
         this._listado [pieza.id] = pieza;
     }
@@ -39,10 +39,10 @@ class Tablero {
     }
 
     listadoCompleto(){
-        this.listadoArr.forEach ( (tarea,i) => {
+        this.listadoArr.forEach ( (pieza,i) => {
 
             const idx = i + 1;
-            const {desc } = tarea;
+            const { desc } = pieza;
 
             console.log(`${ idx } ${ desc }`)
         });
@@ -52,10 +52,10 @@ class Tablero {
 
     mover(){
         
-        this.listadoArr.forEach ( (tarea,i) => {
+        this.listadoArr.forEach ( (pieza,i) => {
 
             const idx = i + 1;
-            const { desc } = tarea;
+            const { desc } = pieza;
             if(desc.toLowerCase() === 'caballo') console.log(`soy un ${desc } y me muevo en L`)
             if ( desc.toLowerCase() === "alfil") console.log( `soy un ${desc } y Me muevo en Diagonal`)
             if ( desc.toLowerCase() === "torre") console.log (`soy un ${desc } y Me muevo en Horizontal y Vertical`)
