@@ -50,7 +50,7 @@ class Tablero {
         
     }
 
-    mover(){
+     mover(){
         
         this.listadoArr.forEach ( (pieza,i) => {
 
